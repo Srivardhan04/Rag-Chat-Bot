@@ -1,0 +1,54 @@
+# Todo
+
+Maintained by Srivardhan04.
+- https://huggingface.co/bartowski/c4ai-command-r7b-12-2024-GGUF
+- https://github.com/Srivardhan04/llama-cpp-python/issues/1995
+- Investigate llama.cpp:
+  - server:
+    - https://github.com/Srivardhan04/llama.cpp/tree/master/tools/server
+  - webui:
+    - https://github.com/Srivardhan04/llama.cpp/discussions/16938
+    - https://github.com/Srivardhan04/llama.cpp/tree/master/tools/server/webui
+- Chunking:
+  - [Introducing Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval)
+  - [Chunking for RAG: Stop Breaking Your Documents Into Meaningless Pieces](https://www.youtube.com/watch?v=trG5pjChAkM)
+  - [Late Chunking: Balancing Precision and Cost in Long Context Retrieval](https://weaviate.io/blog/late-chunking)
+  - [Late Chunking of Short Chunks in Long-Context Embedding Models](https://github.com/Srivardhan04/late-chunking)
+- Reranking:
+  - https://github.com/Srivardhan04/FlashRank
+  - https://github.com/Srivardhan04/rerankers
+  - https://huggingface.co/jinaai/jina-reranker-m0-GGUF
+- Experiment Agentic Patterns:
+  - https://weaviate.io/blog/what-is-agentic-rag
+  - https://github.com/Srivardhan04/agentic_patterns
+  - https://www.youtube.com/watch?v=ApoDzZP8_ck
+  - Function Calling in LLM https://medium.com/@danushidk507/function-calling-in-llm-e537b286a4fd
+  - [Ollama Tool support](https://ollama.com/blog/tool-support)
+  - Google Search with LLM:
+    - https://huggingface.co/blog/nand-tmp/google-search-with-llm
+    - https://blog.nextideatech.com/how-to-use-google-search-with-langchain-openai/
+    - https://medium.com/@reynxzz/rag-with-gemini-google-search-and-bq-vector-search-for-content-personalization-08fe7dab6b33
+    - https://newspaper.readthedocs.io/en/latest/
+    - https://github.com/Srivardhan04/PrAIvateSearch
+- System level safety:
+  - https://huggingface.co/meta-llama/Llama-Guard-3-1B - https://huggingface.co/tensorblock/Llama-Guard-3-1B-GGUF
+    - Llama Guard 3-1B is a fine-tuned Llama-3.2-1B pretrained model for content safety classification.
+  - https://huggingface.co/meta-llama/Llama-Guard-3-8B
+    - Llama Guard 3-8B is a fine-tuned Llama-3.1-8B pretrained model for content safety classification.
+  - https://huggingface.co/meta-llama/Llama-Guard-3-11B-Vision
+    - Llama Guard 3 Vision is a Llama-3.2-11B pretrained model, fine-tuned for content safety classification.
+- Experiment Multimodal LLMs:
+  - `Llama 3.2 Vision 11B` (is currently not supported by `llama.cpp` https://github.com/Srivardhan04/llama.cpp/issues/9643) requires least `8GB` of `VRAM`, and the `90B` model requires at least `64GB` of `VRAM`.
+  - Take also a look here: https://huggingface.co/unsloth
+  - [Jina-VLM: Small Multilingual Vision Language Model](https://jina.ai/news/jina-vlm-small-multilingual-vision-language-model/)
+- Explore long term memory:
+  - https://help.openai.com/en/articles/8590148-memory-faq
+  - https://ai.gopubby.com/long-term-memory-for-agentic-ai-systems-4ae9b37c6c0f
+  - https://github.com/Srivardhan04/mem0
+    - Explore also the structure of the repo https://github.com/Srivardhan04/mem0/tree/main/mem0 and the vector store implementation.
+  - https://github.com/Srivardhan04/pgai - PostgreSQL extension for AI.
+  - https://github.com/Srivardhan04/letta
+- Investigate Chroma batch querying: https://github.com/Srivardhan04/langchain/blob/907c758d67764385828c8abad14a3e64cf44d05b/libs/community/langchain_community/vectorstores/chroma.py#L42
+- Make docker container.
+- Test Flash attention:
+  - https://github.com/Srivardhan04/llama.cpp/pull/5021
