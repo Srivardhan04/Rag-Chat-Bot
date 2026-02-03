@@ -39,64 +39,67 @@ User Query → Query Embedding → Vector Database (Semantic Search) → Relevan
 
 Project Structure
 rag-chatbot-main/
-├── .git/                          # Git repository
-├── .github/workflows/             # CI/CD pipelines
-│   ├── ci.yaml
-│   └── pre-commit.yaml
 │
-├── chatbot/                       # Main application
-│   ├── bot/                       # Core bot engine
-│   │   ├── client/               # LLM clients (llama-cpp, Ollama, OpenAI)
-│   │   ├── conversation/         # Chat history & context management
-│   │   ├── memory/               # Vector embeddings & RAG
-│   │   │   └── vector_database/  # Chroma vector store
-│   │   └── model/                # Model registry & settings
-│   │       └── settings/         # Model configs (llama, qwen, phi, etc)
-│   ├── cli/                      # Command-line interfaces
-│   ├── document_loader/          # PDF & Markdown processing
-│   ├── entities/                 # Data models
-│   ├── helpers/                  # Utilities (logging, formatting)
-│   ├── experiments/              # Research & experiments
-│   ├── chatbot_app.py            # Streamlit conversation chatbot
-│   ├── rag_chatbot_app.py        # Streamlit RAG chatbot
-│   └── memory_builder.py         # Build vector embeddings
+├── chatbot/
+│   ├── memory/                         # Vector embeddings & RAG logic
+│   │   └── vector_database/            # Chroma vector store implementation
+│   │
+│   ├── model/                          # Model registry and configuration
+│   │   └── settings/                   # Model configs (llama, qwen, phi, etc.)
+│   │
+│   ├── cli/                            # Command-line interfaces
+│   ├── document_loader/                # PDF & Markdown document processing
+│   ├── entities/                       # Data models and schemas
+│   ├── helpers/                        # Utility functions (logging, formatting)
+│   ├── experiments/                    # Research experiments and prototypes
+│   │
+│   ├── chatbot_app.py                  # Streamlit conversational chatbot
+│   ├── rag_chatbot_app.py              # Streamlit RAG chatbot (main app)
+│   └── memory_builder.py               # Builds vector embeddings from documents
 │
-├── tests/                        # Test suite
-│   ├── bot/                      # Bot module tests
+├── tests/                              # Test suite
+│   ├── bot/                            # Bot-related tests
 │   │   ├── client/
 │   │   ├── conversation/
 │   │   └── memory/
-│   └── document_loader/          # Document loader tests
+│   │
+│   └── document_loader/                # Document loader tests
 │
-├── docs/                         # Documentation folder
-├── images/                       # Architecture diagrams & screenshots
-├── models/                       # GGUF model storage (empty, user adds)
-├── nltk_data/                    # NLTK tokenizers & taggers (19 languages)
-│   ├── tokenizers/punkt/
-│   └── taggers/averaged_perceptron_tagger/
+├── docs/                               # Documentation and sample documents
 │
-├── vector_store/                 # Chroma vector database storage
+├── images/                             # Architecture diagrams and screenshots
+│
+├── models/                             # Local GGUF model storage (user-provided)
+│
+├── nltk_data/                          # NLTK tokenizers and taggers
+│   ├── tokenizers/
+│   │   └── punkt/
+│   └── taggers/
+│       └── averaged_perceptron_tagger/
+│
+├── vector_store/                       # Persistent Chroma vector database
 │   ├── chroma.sqlite3
 │   └── docs_index/
 │
-├── version/                      # Version files
-│   ├── poetry                    # Poetry version (1.7.0)
-│   └── llama_cpp                 # llama-cpp version
+├── version/                            # Version tracking
+│   ├── poetry                          # Poetry version information
+│   └── llama_cpp                       # llama-cpp version reference
 │
-├── Configuration & Setup
-│   ├── Makefile                  # Build automation
-│   ├── pyproject.toml            # Poetry dependencies
-│   ├── poetry.lock               # Locked versions
-│   ├── setup.sh                  # Linux/macOS setup
-│   └── setup.bat                 # Windows setup
+├── configuration-and-setup/
+│   ├── Makefile                        # Build and automation tasks
+│   ├── pyproject.toml                  # Poetry dependencies
+│   ├── poetry.lock                     # Locked dependency versions
+│   ├── setup.sh                        # Linux/macOS setup script
+│   └── setup.bat                       # Windows setup script
 │
-└── Documentation
-    ├── README.md                 # Main documentation
-    ├── SETUP_GUIDE.md           # Setup instructions
-    ├── PROJECT_STRUCTURE.md     # Architecture docs
-    ├── STRUCTURE_OVERVIEW.md    # This structure (complete)
-    ├── LICENSE                   # MIT License
-    └── demo.md                   # Demo & examples
+└── documentation/
+    ├── README.md                       # Main project documentation
+    ├── SETUP_GUIDE.md                  # Detailed setup instructions
+    ├── PROJECT_STRUCTURE.md            # Architecture explanation
+    ├── STRUCTURE_OVERVIEW.md            # Full structure overview
+    ├── LICENSE                         # MIT License
+    └── demo.md                         #
+
 Document Handling
 
 All documents are stored in the docs/ directory
