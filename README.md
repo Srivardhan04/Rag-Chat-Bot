@@ -6,8 +6,6 @@ Offline RAG Chatbot with Semantic Search powered by Ollama and Vector Database. 
 
 Maintained by Srivardhan04.
 
-[![CI](https://github.com/Srivardhan04/Rag-Chat-Bot/workflows/CI/badge.svg)](https://github.com/Srivardhan04/Rag-Chat-Bot/actions/workflows/ci.yaml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
 
@@ -421,8 +419,6 @@ This makes it suitable for:
 The modular design allows customization for specific use cases while maintaining ease of use for general document Q&A.
 
 ## License
-
-MIT License - See LICENSE file for details
 
 Free for educational, research, and commercial use.
 
