@@ -1,6 +1,6 @@
 # Rag-Chat-Bot
 
-# Rag-Chat-Bot (RAG ChatBot)
+A production-ready Retrieval-Augmented Generation (RAG) ChatBot powered by local LLMs, built with Python and designed for efficient document-based question answering.
 
 Maintained by Srivardhan04.
 
